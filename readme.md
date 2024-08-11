@@ -10,11 +10,9 @@ This project demonstrates the use of a centralized server to facilitate transfer
 - [Usage](#usage)
   - [Key Pair Generation](#key-pair-generation)
   - [Message Signing](#message-signing)
-- [Server-Side Verification](#server-side-verification)
-- [Security Considerations](#security-considerations)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
+- [Client Setup](#client-setup)
+- [Server Setup](#server-setup)
+
 
 ## Overview
 
@@ -68,4 +66,6 @@ The server folder contains a node.js server using [express](https://expressjs.co
 
 The application should connect to the default server port (3042) automatically! 
 
-_Hint_ - Use [nodemon](https://www.npmjs.com/package/nodemon) instead of `node` to automatically restart the server on any changes.
+
+### Credit
+BIG THANKS TO THE ALCHEMY UNIVERSITY
