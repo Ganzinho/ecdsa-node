@@ -1,13 +1,53 @@
 ## ECDSA Node
 
-This project is an example of using a client and server to facilitate transfers between different addresses. Since there is just a single server on the back-end handling transfers, this is clearly very centralized. We won't worry about distributed consensus for this project.
+# ECDSA Node
 
-However, something that we would like to incoporate is Public Key Cryptography. By using Elliptic Curve Digital Signatures we can make it so the server only allows transfers that have been signed for by the person who owns the associated address.
+This project demonstrates the use of a centralized server to facilitate transfers between different addresses, secured by Elliptic Curve Digital Signatures (ECDSA). The primary objective is to ensure that the server only processes transactions that have been signed by the owner of the corresponding address, utilizing public key cryptography.
 
-### Video instructions
-For an overview of this project as well as getting started instructions, check out the following video:
+## Table of Contents
+- [Overview](#overview)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Key Pair Generation](#key-pair-generation)
+  - [Message Signing](#message-signing)
+- [Server-Side Verification](#server-side-verification)
+- [Security Considerations](#security-considerations)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [License](#license)
 
-https://www.loom.com/share/0d3c74890b8e44a5918c4cacb3f646c4
+## Overview
+
+This project includes two main scripts:
+
+1. **`generateKeyPairs.js`**: Generates a public-private key pair, simulating the functionality of a hardware wallet by generating keys offline. It returns the Ethereum address, private key, and public key.
+
+2. **`signMessage.js`**: Signs a message using the private key generated from the `generateKeyPairs` script. The message typically includes transaction details such as the amount to send to another address. The script returns a digital signature.
+
+
+## Usage
+
+### Key Pair Generation
+
+Use the `generateKeyPairs.js` script to generate a new public-private key pair. This will simulate generating keys in an offline environment, similar to a hardware wallet.
+
+Run the script:
+
+node generateKeyPairs.js
+
+This will output:
+
+- Ethereum Address
+- Private Key
+- Public Key
+
+**Example Output**:
+
+vbnet
+Ethereum Address: 0xYourEthereumAddress
+Private Key: 0xYourPrivateKey
+Public Key: 0xYourPublicKey
+
  
 ### Client
 
